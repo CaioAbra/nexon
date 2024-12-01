@@ -1,0 +1,291 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #060709;
+    /* Cor de fundo geral */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #060709;
+}
+
+.header .logo {
+    height: 50px;
+    /* Ajustar o tamanho do logo */
+}
+
+.header a.btn {
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.header a.btn.btn-login {
+    align-content: center;
+    align-items: center;
+    background-color: #646f861a;
+    border-radius: 8px;
+    display: inline-flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    padding: 16px 24px;
+    border: none;
+    position: relative;
+    color: #ffff;
+}
+
+/* Botão com gradiente na borda e fundo */
+.header a.btn-newCount {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    background: linear-gradient(72.24408090907221deg, #1430b8 20.579999685287476%, rgba(74, 146, 255, 1) 100%);
+    /* Fundo do botão */
+    z-index: 1;
+    /* Garantir que o botão esteja acima */
+    overflow: hidden;
+    /* Evita que o pseudo-elemento transborde */
+    transition: all 0.3s ease-in-out;
+}
+
+.header a.btn-newCount::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #1a40ff 0%, rgba(128, 149, 255, 1) 100%);
+    /* Gradiente da borda */
+    z-index: -1;
+    /* Posicionar atrás do botão */
+    border-radius: 8px;
+    /* Maior que o botão para criar a borda */
+    padding: 3px;
+    /* Define o espaço da borda */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    /* Remove a parte interna */
+    transition: all 0.3s ease-in-out;
+}
+
+.header a.btn-newCount:hover {
+    transform: translateY(-2px);
+    /* Efeito ao passar o mouse */
+}
+
+.header a.btn-newCount:active {
+    transform: translateY(0);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Efeito de pressionado */
+}
+
+
+/* Hero Section */
+.hero {
+    background-color: #060709;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Vantagens */
+.vantagens h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.vantagens .card {
+    padding: 20px;
+    background: linear-gradient(145deg, #222, #060709);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.vantagens .card img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.vantagens .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.vantagens .card-text {
+    font-size: 0.9rem;
+}
+
+/* Timeline Section */
+.timeline h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.timeline .row {
+    margin-bottom: 40px;
+}
+
+.timeline img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.timeline h5 {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.timeline .timeline-step {
+    position: relative;
+}
+
+.timeline .timeline-number {
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.timeline .timeline-line {
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    margin: 0 auto;
+}
+
+/* FAQ */
+.faq h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.faq .card {
+    border: none;
+    background: linear-gradient(145deg, #222, #060709);
+    margin-bottom: 10px;
+}
+
+.faq .card-header {
+    background: transparent;
+}
+
+.faq .btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.faq .btn-link:hover {
+    text-decoration: underline;
+}
+
+.faq .collapse {
+    background: #060709;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0056b3, #003d80);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .vantagens .card {
+        margin-bottom: 20px;
+    }
+
+    .timeline img {
+        max-width: 100%;
+    }
+
+    .timeline h5 {
+        font-size: 0.9rem;
+    }
+
+    .faq .btn-link {
+        font-size: 0.9rem;
+    }
+}
