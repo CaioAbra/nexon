@@ -296,31 +296,86 @@ section {
 
 
 /* Vantagens */
-.vantagens h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
+.vantagens-section {
+    /* background: #000; */
+    /* Fundo da seção */
 }
 
-.vantagens .card {
+.card.bg-gradient {
+    background:
+        radial-gradient(40.126% 40.126% at 100% 50%, rgba(16, 70, 185, 0.36) 0%, rgba(7, 31, 83, 0) 118%),
+        radial-gradient(100% 100% at 52% 50%, rgba(34, 41, 55, 0.6) 0%, rgba(35, 42, 56, 0) 100%),
+        radial-gradient(40.126% 40.126% at 50% 91%, #060709 0%, rgba(6, 7, 9, 0) 100%);
+    /* Gradiente sutil */
+    border-radius: 12px;
+    /* Bordas arredondadas */
+    /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6); */
+    /* Sombra */
+    overflow: hidden;
+    /* Garante que o conteúdo extra seja cortado */
     padding: 20px;
-    background: linear-gradient(145deg, #222, #060709);
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transições suaves */
 }
 
-.vantagens .card img {
-    width: 50px;
-    margin-bottom: 15px;
+
+.card img {
+    max-width: 50px;
+    /* Tamanho do ícone */
 }
 
-.vantagens .card-title {
+.card-title {
+    margin-top: .5rem;
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #ffff;
 }
 
-.vantagens .card-text {
-    font-size: 0.9rem;
+.card-text {
+    font-size: 0.95rem;
+    color: #ABAEBB;
+    /* Texto em tom mais claro */
 }
+
+/* Estilo do botão com gradiente */
+.vantagens-section .btn-gradient {
+    display: inline-block;
+    padding: 12px 30px;
+    /* Espaçamento interno */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    font-weight: 400;
+    /* Peso da fonte */
+    color: #ffffff;
+    /* Texto branco */
+    text-align: center;
+    /* Centraliza o texto */
+    text-decoration: none;
+    /* Remove sublinhado */
+    background: linear-gradient(72.2441deg, #1430b8 20.58%, rgba(74, 146, 255, 1) 100%);
+    /* Gradiente de fundo */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 72, 255, 0.5);
+    /* Sombra ao redor */
+    /* Define borda transparente inicial */
+    position: relative;
+    /* Para o pseudo-elemento funcionar */
+    overflow: hidden;
+    /* Garante que o pseudo-elemento não ultrapasse o botão */
+    transition: all 0.3s ease;
+    /* Suaviza as mudanças */
+}
+
+/* Efeito ao passar o mouse */
+.vantagens-section .btn-gradient:hover {
+    opacity: 1;
+    /* Realça a borda ao passar o mouse */
+    transform: scale(1.05);
+    /* Expande levemente */
+}
+
 
 /* Timeline Section */
 .timeline h2 {
