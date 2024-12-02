@@ -181,7 +181,6 @@ section {
     height: 30px;
 }
 
-
 /* Botão */
 .hero .btn-hero {
     position: relative;
@@ -217,10 +216,82 @@ section {
     /* Posiciona atrás do botão */
 }
 
-
 .hero .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Seção de Trading */
+.trading-section {
+    position: relative;
+    height: 500px;
+    /* Altura ajustável */
+    background-color: #000;
+    /* Cor de fundo base */
+    overflow: hidden;
+    /* Garante que o conteúdo extra seja ocultado */
+}
+
+/* Imagem de fundo */
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./../images/bg-sub-hero.avif') no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.8);
+    /* Reduz brilho do fundo */
+    z-index: 1;
+    /* Fundo está no nível mais baixo */
+}
+
+/* Gráfico animado */
+.chart-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+    /* Gráfico fica acima do fundo */
+}
+
+.chart-img {
+    /* width: 90%; */
+    /* Ajuste de largura */
+    max-width: 80vw;
+    /* border-radius: 20px; */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    animation: float 3s infinite ease-in-out;
+    /* Animação de "flutuar" */
+}
+
+@media screen and (min-width:1024px) {
+    .chart-img {
+        max-width: 60vw;
+    }
+}
+
+@media screen and (min-width:1366px) {
+    .chart-img {
+        max-width: 50vw;
+    }
+}
+
+/* Animação do gráfico */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        /* Posição inicial e final */
+    }
+
+    50% {
+        transform: translate(-50%, -52%) scale(1.02);
+        /* Leve subida e aumento */
+    }
 }
 
 
