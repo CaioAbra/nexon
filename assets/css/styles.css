@@ -6,16 +6,30 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Gmarket Sans', sans-serif;
     background-color: #060709;
     /* Cor de fundo geral */
     color: #fff;
-    line-height: 1.6;
+    /* line-height: 1.6; */
+}
+
+.bg-top {
+    position: absolute;
+    top: -14%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
 }
 
 /* Header */
 .header {
-    background-color: #060709;
+    /* background-color: #060709; */
+}
+
+.header .contant,
+section {
+    z-index: 1;
 }
 
 .header .logo {
@@ -23,9 +37,15 @@ body {
     /* Ajustar o tamanho do logo */
 }
 
+.header .textLogo {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
 .header a.btn {
     border-radius: 20px;
-    font-weight: bold;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .header a.btn.btn-login {
@@ -103,26 +123,106 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #060709;
+    /* background: linear-gradient(180deg, #111831 0%, #0a0d1a 100%); */
+    /* Fundo com gradiente escuro */
     padding: 60px 0;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-family: 'Gmarket Sans', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    /* line-height: 58.38px; */
     margin-bottom: 20px;
+    /* color: #fff; */
+    background-image: linear-gradient(rgb(255, 255, 255) 55%, rgb(153, 153, 153) 100%);
+    display: inline-block;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+.hero p.badge-text {
+    text-align: left;
+    margin: 0;
+    display: grid;
+}
+
+.hero p.badge-text .badge-text-legal {
+    font-size: 8.11px;
+    color: #DDDEEC;
+}
+
+.hero p.badge-text .badge-text {
+    font-size: .7094rem;
+    color: #E3E4E9F2;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1rem;
+    color: #A4B3D3;
+    font-weight: 400;
+    /* Texto em tom de cinza */
+    /* margin-bottom: 30px; */
 }
 
-.hero img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+/* Selo */
+.badge-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
+
+.badge-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Botão */
+.hero .btn-hero {
+    position: relative;
+    /* Necessário para os pseudo-elementos */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(72.2441deg, rgb(20, 48, 184) 20.58%, rgb(74, 146, 255) 100%);
+    z-index: 1;
+    /* Para garantir que o botão fique acima */
+    overflow: hidden;
+    /* Garante que os pseudo-elementos não transbordem */
+}
+
+.hero .btn-hero::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 12px;
+    /* Borda externa maior que o botão */
+    background: rgba(255, 255, 255, 0.08);
+    /* Cor da borda */
+    z-index: -1;
+    /* Posiciona atrás do botão */
+}
+
+
+.hero .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
 
 /* Vantagens */
 .vantagens h2 {
@@ -269,6 +369,10 @@ body {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .header a.btn-newCount {
+        /* padding: 0; */
+    }
+
     .hero h1 {
         font-size: 1.8rem;
     }
