@@ -13,6 +13,56 @@ body {
     /* line-height: 1.6; */
 }
 
+h1,
+h2,
+h3,
+h4 {
+    background-image: linear-gradient(rgb(255, 255, 255) 55%, rgb(153, 153, 153) 100%) !important;
+    display: inline-block !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* Estilo do botão com gradiente */
+.btn-gradient {
+    display: inline-block;
+    padding: 12px 30px;
+    /* Espaçamento interno */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    font-weight: 400;
+    /* Peso da fonte */
+    color: #ffffff;
+    /* Texto branco */
+    text-align: center;
+    /* Centraliza o texto */
+    text-decoration: none;
+    /* Remove sublinhado */
+    background: linear-gradient(72.2441deg, #1430b8 20.58%, rgba(74, 146, 255, 1) 100%);
+    /* Gradiente de fundo */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 72, 255, 0.5);
+    /* Sombra ao redor */
+    /* Define borda transparente inicial */
+    position: relative;
+    /* Para o pseudo-elemento funcionar */
+    overflow: hidden;
+    /* Garante que o pseudo-elemento não ultrapasse o botão */
+    transition: all 0.3s ease;
+    /* Suaviza as mudanças */
+}
+
+/* Efeito ao passar o mouse */
+.btn-gradient:hover {
+    text-decoration: none;
+    color: #DDDEEC;
+    opacity: 1;
+    /* Realça a borda ao passar o mouse */
+    transform: scale(1.05);
+    /* Expande levemente */
+}
+
 .bg-top {
     position: absolute;
     top: -14%;
@@ -338,43 +388,6 @@ section {
     /* Texto em tom mais claro */
 }
 
-/* Estilo do botão com gradiente */
-.vantagens-section .btn-gradient {
-    display: inline-block;
-    padding: 12px 30px;
-    /* Espaçamento interno */
-    font-size: 1rem;
-    /* Tamanho da fonte */
-    font-weight: 400;
-    /* Peso da fonte */
-    color: #ffffff;
-    /* Texto branco */
-    text-align: center;
-    /* Centraliza o texto */
-    text-decoration: none;
-    /* Remove sublinhado */
-    background: linear-gradient(72.2441deg, #1430b8 20.58%, rgba(74, 146, 255, 1) 100%);
-    /* Gradiente de fundo */
-    border-radius: 10px;
-    /* Bordas arredondadas */
-    box-shadow: 0 4px 15px rgba(0, 72, 255, 0.5);
-    /* Sombra ao redor */
-    /* Define borda transparente inicial */
-    position: relative;
-    /* Para o pseudo-elemento funcionar */
-    overflow: hidden;
-    /* Garante que o pseudo-elemento não ultrapasse o botão */
-    transition: all 0.3s ease;
-    /* Suaviza as mudanças */
-}
-
-/* Efeito ao passar o mouse */
-.vantagens-section .btn-gradient:hover {
-    opacity: 1;
-    /* Realça a borda ao passar o mouse */
-    transform: scale(1.05);
-    /* Expande levemente */
-}
 
 
 /* Timeline Section */
@@ -384,138 +397,120 @@ section {
     text-align: center;
 }
 
-.timeline .row {
-    margin-bottom: 40px;
-}
-
-.timeline img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.timeline h5 {
-    margin-top: 20px;
-    font-size: 1rem;
-}
-
-.timeline .timeline-step {
+/* Seção da timeline */
+.timeline-section {
+    background-color: #000;
+    /* Fundo escuro */
     position: relative;
+    padding: 50px 0;
 }
 
-.timeline .timeline-number {
-    width: 50px;
-    height: 50px;
-    background: #007bff;
-    color: #fff;
-    border-radius: 50%;
+/* Estrutura geral da timeline */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Linha vertical limitada aos pontos */
+.timeline::before {
+    content: "";
+    max-height: 47rem;
+    position: absolute;
+    top: 6rem;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(147deg, #1c1d22 0%, rgba(45, 50, 71, 1) 47%, rgba(70, 76, 109, 1) 100%);
+    z-index: 0;
+    transform: translateX(-50%);
+}
+
+/* Linha e itens */
+.timeline-row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Caixa do número */
+.timeline-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(147deg, #1c1d22 0%, rgba(45, 50, 71, 1) 47%, rgba(70, 76, 109, 1) 100%);
+    display: flex;
     justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.timeline .timeline-line {
-    width: 2px;
-    height: 100%;
-    background: #fff;
-    margin: 0 auto;
-}
-
-/* FAQ */
-.faq h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.faq .card {
-    border: none;
-    background: linear-gradient(145deg, #222, #060709);
-    margin-bottom: 10px;
-}
-
-.faq .card-header {
-    background: transparent;
-}
-
-.faq .btn-link {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.faq .btn-link:hover {
-    text-decoration: underline;
-}
-
-.faq .collapse {
-    background: #060709;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-/* Footer */
-.footer {
-    background-color: #000;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer p {
-    font-size: 0.9rem;
-}
-
-.footer a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* Botões */
-.btn-primary {
-    background: linear-gradient(45deg, #007bff, #0056b3);
-    border: none;
+    align-items: center;
+    font-size: 1.5rem;
     color: #fff;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 20px;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    z-index: 1;
+    /* Garante que os círculos fiquem acima da linha */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.btn-primary:hover {
-    background: linear-gradient(45deg, #0056b3, #003d80);
+/* Texto da timeline */
+.timeline-content {
+    width: 40%;
+    text-align: center;
+    z-index: 1;
 }
+
+.timeline-content .timeline-text {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Caixa da imagem */
+.timeline-img-box {
+    width: 100%;
+    background: linear-gradient(98.42deg, #10141c 12.35%, rgba(100, 111, 134, 0.4) 55.29%, rgba(16, 20, 28, 1) 100%);
+    border-radius: 10px;
+    height: 12rem;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-img-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.bg-timeline {
+    bottom: 40%;
+    position: absolute;
+    transform: rotate(90deg);
+
+}
+
+
+
+
+
+
+
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .header a.btn-newCount {
-        /* padding: 0; */
-    }
+    @media (max-width: 768px) {
+        .header a.btn-newCount {
+            /* padding: 0; */
+        }
 
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+        .hero h1 {
+            font-size: 1.8rem;
+        }
 
-    .vantagens .card {
-        margin-bottom: 20px;
+        .vantagens .card {
+            margin-bottom: 20px;
+        }
     }
-
-    .timeline img {
-        max-width: 100%;
-    }
-
-    .timeline h5 {
-        font-size: 0.9rem;
-    }
-
-    .faq .btn-link {
-        font-size: 0.9rem;
-    }
-}
