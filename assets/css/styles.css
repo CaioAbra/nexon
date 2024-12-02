@@ -494,23 +494,102 @@ section {
 }
 
 
+/* FAQ Section */
+.faq-section {
+    /* background-color: #000; */
+}
 
+/* FAQ Item */
+.faq-item {
+    background: linear-gradient(98.416deg, rgb(16, 20, 28) 12.35%, rgba(100, 111, 134, 0.4) 55.29%, rgb(16, 20, 28) 100%);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); */
+}
+
+/* FAQ Question */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.faq-question:hover .btn-icon {
+    transform: scale(1.1);
+}
+
+/* FAQ Answer */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 150px;
+    /* Ajuste conforme necessário */
+    padding: 10px 15px;
+}
+
+/* Ícones */
+.btn-icon {
+    background: linear-gradient(rgb(20, 48, 184) 0%, rgb(74, 146, 255) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-icon i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .btn-icon i {
+    transform: rotate(180deg);
+}
 
 
 
 
 
 /* Responsividade */
-    @media (max-width: 768px) {
-        .header a.btn-newCount {
-            /* padding: 0; */
-        }
-
-        .hero h1 {
-            font-size: 1.8rem;
-        }
-
-        .vantagens .card {
-            margin-bottom: 20px;
-        }
+@media (max-width: 768px) {
+    .header a.btn-newCount {
+        /* padding: 0; */
     }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .vantagens .card {
+        margin-bottom: 20px;
+    }
+}
