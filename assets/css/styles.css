@@ -578,6 +578,96 @@ section {
 
 
 
+/* Footer Section */
+.footer-section {
+    background: url('./../images/bg-footer.png');
+    color: rgb(164, 179, 211);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+}
+
+/* Footer Logo */
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-logo p {
+    color: rgb(164, 179, 211);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-note p {
+    /* color: rgb(164, 179, 211); */
+}
+
+/* Footer Headings */
+.footer-heading {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Footer Links */
+.footer-link {
+    color: rgb(164, 179, 211);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #4a92ff;
+}
+
+/* Footer Social Icons */
+.footer-social a {
+    color: rgb(164, 179, 211);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #4a92ff;
+}
+
+.text-footer-logo {
+    font-size: 1.5rem;
+}
+
+/* Footer Note */
+.footer-note p {
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-top: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-logo img {
+        margin-bottom: 1rem;
+    }
+
+    .footer-heading {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footer-link {
+        text-align: left;
+    }
+}
+
+
+
+
 
 /* Responsividade */
 @media (max-width: 768px) {
